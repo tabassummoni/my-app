@@ -1,0 +1,88 @@
+import React, { useContext } from 'react';
+import { useLoaderData, useLocation, useNavigate, useParams } from 'react-router-dom';
+import { AuthContext } from '../../../contex/AuthProvider';
+import Swal from 'sweetalert2'
+import useAxiosSecure from '../../../hooks/useAxiosSecure';
+import useCart from '../../../hooks/useCart';
+
+const HairDetails = () => {
+  const { _id, name, image, price, details } = useLoaderData();
+  const { user } = useContext(AuthContext);
+  const navigate = useNavigate();
+  const location = useLocation();
+  const axiosSecure = useAxiosSecure();
+  const [, refetch] = useCart();
+  const handleAddTOCart = () => {
+
+    if (user && user.email) {
+      //send cart item to the database..
+      const cartItem = {
+        menuId: _id,
+        email: user.email,
+        name,
+        image,
+        price
+      }
+      axiosSecure.post('/cartItem', cartItem)
+        .then(res => {
+          if (res.data.insertedId) {
+            Swal.fire({
+              position: "top-end",
+              icon: "success",
+              title: `${name} added to your cart`,
+              showConfirmButton: false,
+              timer: 1500
+            });
+            //refetch cart to update the caet items count
+            refetch();
+          }
+        })
+    }
+    else {
+      Swal.fire({
+        title: "𝐘𝐨𝐮 𝐚𝐫𝐞 𝐧𝐨𝐭 𝐥𝐨𝐠𝐠𝐞𝐝 𝐈𝐧",
+        text: "𝐏𝐥𝐞𝐚𝐬𝐞 𝐥𝐨𝐠𝐢𝐧 𝐭𝐨 𝐚𝐝𝐝 𝐭𝐨 𝐭𝐡𝐞 𝐜𝐚𝐫𝐭 ! ",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#3085d6",
+        cancelButtonColor: "#d33",
+        confirmButtonText: "𝐘𝐞𝐬 ,  𝐋𝐨𝐠𝐈𝐧"
+      }).then((result) => {
+        if (result.isConfirmed) {
+          navigate('/login', { state: { from: location } })
+        }
+      });
+    }
+
+  }
+
+  return (
+    <div className='lg:p-7   bg-black  lg:flex' >
+      <div className='w-96'>
+        <img className='w-96 md:ml-48 md:mt-8' src={image} alt="Shoes" />
+
+      </div>
+      <div className="ml-56">
+        <h2 className="text-amber-50 font-bold text-2xl mt-12 ">{name}</h2>
+        <h2 className="text-amber-50 font-xl mt-5">{price} Tk</h2>
+        <p className='text-amber-50 font-xl mt-5'>{details}</p>
+        <h2 className="text-amber-50 text-xl mt-2">Expiration Date :{price} Tk</h2>
+        <div className='flex gap-3 '>
+          <div className="card-actions lg:justify-center justify-end mt-4 ">
+            <button
+              onClick={handleAddTOCart}
+              className="">𝐀𝐝𝐝 𝐭𝐨 𝐂𝐚𝐫𝐭</button>
+          </div>
+          <div className="card-actions lg:justify-center justify-end mt-4">
+            <button
+              // onClick={ handleAddTOCart}
+              className="">𝐖𝐢𝐬𝐡 𝐋𝐢𝐬𝐭</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  );
+};
+
+export default HairDetails;
