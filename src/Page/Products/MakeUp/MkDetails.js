@@ -59,10 +59,10 @@ const MkDetails = () => {
   return (
     <div className='lg:p-7   bg-black  lg:flex' >
       <div className='w-96'>
-        <img className='w-96 md:ml-48 md:mt-8' src={image} alt="Shoes" />
+        <img className='w-96 md:ml-48 z' src={image} alt="Shoes" />
 
       </div>
-      <div className="ml-56">
+      <div className="lg:ml-56 md:ml-14 ml-4">
         <h2 className="text-amber-50 font-bold text-2xl mt-12 ">{name}</h2>
         <h2 className="text-amber-50 font-xl mt-5">{price} Tk</h2>
         <p className='text-amber-50 font-xl mt-5'>{details}</p>
@@ -72,11 +72,11 @@ const MkDetails = () => {
             onClick={handleAddTOCart}
             className="">𝐀𝐝𝐝 𝐭𝐨 𝐂𝐚𝐫𝐭</button>
         </div>
-        <div className="card-actions lg:justify-center justify-end mt-4">
+        {/* <div className="card-actions lg:justify-center justify-end mt-4">
           <button
             // onClick={ handleAddTOCart}
             className="">𝐖𝐢𝐬𝐡 𝐋𝐢𝐬𝐭</button>
-        </div>
+        </div> */}
       </div>
     </div>
 

@@ -43,7 +43,7 @@ const TopHeade = () => {
       <div >
         <div className='text-white text-end p-2 menu menu-horizontal px-1 gap-5 lg:mr-9  text-xs md:text-sm lg:text-lg'>
           {/* <NavLink to='/sign'>𝚂𝚒𝚐𝚗 𝚄𝚙</NavLink> */}
-          <Link to='/about'>𝙰𝚋𝚘𝚞𝚝 𝚄𝚜</Link>
+          <Link to='/about' className='text-xl'>𝙰𝚋𝚘𝚞𝚝 𝚄𝚜</Link>
           {user ? <>
          
             <Link  className='text-xl  ' to="" onClick={handleLogOut}>𝙻𝚘𝚐 𝙾𝚞𝚝</Link>

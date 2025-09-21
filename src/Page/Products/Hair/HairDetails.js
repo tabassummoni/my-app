@@ -59,7 +59,7 @@ const HairDetails = () => {
   return (
     <div className='lg:p-7   bg-black  lg:flex' >
       <div className='w-96'>
-        <img className='w-96 md:ml-48 md:mt-8' src={image} alt="Shoes" />
+        <img className='w-96 md:ml-48 ' src={image} alt="Shoes" />
 
       </div>
       <div className="ml-56">
@@ -73,11 +73,11 @@ const HairDetails = () => {
               onClick={handleAddTOCart}
               className="">𝐀𝐝𝐝 𝐭𝐨 𝐂𝐚𝐫𝐭</button>
           </div>
-          <div className="card-actions lg:justify-center justify-end mt-4">
+          {/* <div className="card-actions lg:justify-center justify-end mt-4">
             <button
               // onClick={ handleAddTOCart}
               className="">𝐖𝐢𝐬𝐡 𝐋𝐢𝐬𝐭</button>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

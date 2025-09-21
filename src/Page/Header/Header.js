@@ -43,7 +43,7 @@ const Header = () => {
               <Link className=' lg:text-xl md:text-base text-sm text-white font-bold' to='/babyCare'> 𝙱𝚊𝚋𝚢 𝙲𝚊𝚛𝚎</Link>
               {/* <Link className=' lg:text-xl md:text-base text-sm text-white font-bold' to='dashboard/cart'>𝙲𝚊𝚛𝚝 𝙸𝚝𝚎𝚖
                 <div className='badge badge-outline ml-2 text-white text-xl' style={{ background: '#4a0429' }}>{cart.length}</div></Link> */}
-                {user && (
+                {/* {user && (
               role === "admin" ? (
                 <Link
                   className="lg:text-xl md:text-base text-sm text-white font-bold"
@@ -65,7 +65,7 @@ const Header = () => {
                   </div>
                 </Link>
               )
-            )}
+            )} */}
 
 
 
@@ -78,6 +78,45 @@ const Header = () => {
     </ul>
   </details>
 </li> */}
+
+{/* 🔹 Conditional Role-Based Links */}
+            {user ? (
+              role === 'admin' ? (
+                <Link
+                  className="lg:text-xl md:text-base text-sm text-white font-bold"
+                  to="/dashboard"
+                >
+                  🛠️ 𝙳𝚊𝚜𝚑𝚋𝚘𝚊𝚛𝚍
+                </Link>
+              ) : (
+                <Link
+                  className="lg:text-xl md:text-base text-sm text-white font-bold flex items-center"
+                  to="/dashboard/cart"
+                >
+                  𝙲𝚊𝚛𝚝 𝙸𝚝𝚎𝚖
+                  <div
+                    className="badge badge-outline ml-2 text-white text-sm md:text-base lg:text-xl"
+                    style={{ background: '#4a0429' }}
+                  >
+                    {cart.length}
+                  </div>
+                </Link>
+              )
+            ) : (
+              // 🔹 Guest → Always show Cart Item (0)
+              <Link
+                className="lg:text-xl md:text-base text-sm text-white font-bold flex items-center"
+                to="/dashboard/cart"
+              >
+                𝙲𝚊𝚛𝚝 𝙸𝚝𝚎𝚖
+                <div
+                  className="badge badge-outline ml-2 text-white text-sm md:text-base lg:text-xl"
+                  style={{ background: '#4a0429' }}
+                >
+                  0
+                </div>
+              </Link>
+            )}
             </ul>
           </div>
         </div>
