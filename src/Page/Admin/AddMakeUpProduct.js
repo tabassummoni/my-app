@@ -40,7 +40,7 @@ const AddMakeUpProduct = () => {
         // const initialData = Object.fromEntries(formData.entries());
         // console.log(initialData);
 
-        fetch('http://localhost:4000/makeupcosmetics',{
+        fetch('https://my-app-server-liard.vercel.app/makeupcosmetics',{
             method :'POST',
             headers: {
                 'content-type': 'application/json'

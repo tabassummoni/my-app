@@ -13,7 +13,7 @@ const handleUpdate =  event =>{
     const details = form.details.value;
     console.log(name,price);
     const updateSkinProduct ={name,price,expiration,details}
-    fetch(`http://localhost:4000/cosmetics/${_id}`,{
+    fetch(`https://my-app-server-liard.vercel.app/cosmetics/${_id}`,{
       method :'PUT',
       headers:{
         'content-type' : 'application/json'

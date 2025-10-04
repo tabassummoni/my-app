@@ -5,7 +5,7 @@ const HairShow = () => {
      
     const [hairProducts ,setHairProducts] = useState([]);
     useEffect ( () => {
-        fetch('http://localhost:4000/cosmetics')
+        fetch('https://my-app-server-liard.vercel.app/cosmetics')
         .then(res => res.json())
         .then(data => setHairProducts(data))
     })

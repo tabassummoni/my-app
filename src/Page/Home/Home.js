@@ -62,6 +62,7 @@ const Home = () => {
       <div className="text-center mb-6">
   <h2 className="text-3xl font-bold text-white ">✨<span className='underline'>𝐎𝐮𝐫 𝐏𝐫𝐨𝐝𝐮𝐜𝐭 𝐑𝐞𝐯𝐢𝐞𝐰𝐬 </span> </h2>
   <p className="text-gray-500 mt-2">𝐒𝐞𝐞 𝐰𝐡𝐚𝐭 𝐨𝐮𝐫 𝐜𝐮𝐬𝐭𝐨𝐦𝐞𝐫𝐬 𝐚𝐫𝐞 𝐬𝐚𝐲𝐢𝐧𝐠!</p>
+  <p></p>
 </div>
       <ReviewShow></ReviewShow>
 

@@ -43,7 +43,7 @@ const AddskinPro = () => {
         // const initialData = Object.fromEntries(formData.entries());
         // console.log(initialData);
 
-        fetch('http://localhost:4000/skin',{
+        fetch('https://my-app-server-liard.vercel.app/skin',{
             method :'POST',
             headers: {
                 'content-type': 'application/json'

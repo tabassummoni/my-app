@@ -4,7 +4,7 @@ import BabyShowDetails from './BabyShowDetails';
 const BabyShow = () => {
      const [babyProducts ,setSkinProducts] = useState([]);
     useEffect ( () => {
-        fetch('http://localhost:4000/babyCosmetics')
+        fetch('https://my-app-server-liard.vercel.app/babyCosmetics')
         .then(res => res.json())
         .then(data => setSkinProducts(data))
     })

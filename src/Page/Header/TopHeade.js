@@ -13,7 +13,7 @@ const TopHeade = () => {
 
   useEffect(() => {
     if (user?.email) {
-      fetch(`http://localhost:4000/users/${user.email}`)
+      fetch(`https://my-app-server-liard.vercel.app/users/${user.email}`)
         .then(res => res.json())
         .then(data => setDbUser(data))
         .catch(err => console.error(err));
@@ -42,7 +42,6 @@ const TopHeade = () => {
 
       <div >
         <div className='text-white text-end p-2 menu menu-horizontal px-1 gap-5 lg:mr-9  text-xs md:text-sm lg:text-lg'>
-          {/* <NavLink to='/sign'>𝚂𝚒𝚐𝚗 𝚄𝚙</NavLink> */}
           <Link to='/about' className='text-xl'>𝙰𝚋𝚘𝚞𝚝 𝚄𝚜</Link>
           {user ? <>
          

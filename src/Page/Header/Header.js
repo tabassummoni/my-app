@@ -12,7 +12,7 @@ const Header = () => {
   // 🔹 Get user role from server when logged in
   useEffect(() => {
     if (user?.email) {
-      fetch(`http://localhost:4000/users/${user.email}/role`)
+      fetch(`https://my-app-server-liard.vercel.app/users/${user.email}/role`)
         .then((res) => res.json())
         .then((data) => setRole(data.role))
         .catch((err) => console.error("Error getting role", err));

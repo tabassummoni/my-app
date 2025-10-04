@@ -4,7 +4,7 @@ import MakeUpShowDetails from './MakeUpShowDetails';
 const MakeUpShow = () => {
    const [makeUpProducts ,setMakeUpProducts] = useState([]);
     useEffect ( () => {
-        fetch('http://localhost:4000/makeupcosmetics')
+        fetch('https://my-app-server-liard.vercel.app/makeupcosmetics')
         .then(res => res.json())
         .then(data => setMakeUpProducts(data))
     })

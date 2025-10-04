@@ -6,7 +6,7 @@ const SkinShow = () => {
     
     const [skinProducts ,setSkinProducts] = useState([]);
     useEffect ( () => {
-        fetch('http://localhost:4000/skin')
+        fetch('https://my-app-server-liard.vercel.app/skin')
         .then(res => res.json())
         .then(data => setSkinProducts(data))
     })

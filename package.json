@@ -15,7 +15,7 @@
     "bootstrap": "^5.3.3",
     "create-vite": "^6.5.0",
     "fa-icons": "^0.2.0",
-    "firebase": "^11.9.1",
+    "firebase": "^11.10.0",
     "framer-motion": "^12.23.0",
     "jsonwebtoken": "^9.0.2",
     "lottie-react": "^2.4.1",

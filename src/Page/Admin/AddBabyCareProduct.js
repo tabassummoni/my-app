@@ -41,7 +41,7 @@ const AddBabyCareProduct = () => {
         // const initialData = Object.fromEntries(formData.entries());
         // console.log(initialData);
 
-        fetch('http://localhost:4000/babyCosmetics',{
+        fetch('https://my-app-server-liard.vercel.app/babyCosmetics',{
             method :'POST',
             headers: {
                 'content-type': 'application/json'
