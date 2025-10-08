@@ -61,7 +61,7 @@ export const router = createBrowserRouter([
             {
                 path: 'skincare/:id',
                 element: <SkinDetails></SkinDetails>,
-                loader:({params})=>fetch(`https://my-app-server-liard.vercel.app/skin/${params.id}`)
+                loader:({params})=>fetch(`https://my-app-server-phi.vercel.app/skin/${params.id}`)
          
             },
             {
@@ -71,7 +71,7 @@ export const router = createBrowserRouter([
             {
                 path: 'makeUpCare/:id',
                 element: <HairDetails></HairDetails>,
-                loader:({params})=>fetch(`https://my-app-server-liard.vercel.app/makeupcosmetics/${params.id}`)
+                loader:({params})=>fetch(`https://my-app-server-phi.vercel.app/makeupcosmetics/${params.id}`)
             },
             
             {
@@ -81,7 +81,7 @@ export const router = createBrowserRouter([
             {
                 path: 'hairCare/:id',
                 element: <HairDetails></HairDetails>,
-                loader:({params})=>fetch(`https://my-app-server-liard.vercel.app/cosmetics/${params.id}`)
+                loader:({params})=>fetch(`https://my-app-server-phi.vercel.app/cosmetics/${params.id}`)
             }, 
             {
                 path: '/babyCare',
@@ -90,7 +90,7 @@ export const router = createBrowserRouter([
             {
                 path: 'babyCare/:id',
                 element: <BMDetails></BMDetails>,
-                loader:({params})=>fetch(`https://my-app-server-liard.vercel.app/babyCosmetics/${params.id}`)
+                loader:({params})=>fetch(`https://my-app-server-phi.vercel.app/babyCosmetics/${params.id}`)
             }, 
             {
                 path: '/about',
@@ -120,7 +120,7 @@ export const router = createBrowserRouter([
             // {
             //     path: '/skinEdit/:id',
             //     element:<SkinEdit></SkinEdit>,
-            //     loader:({params})=>fetch(`https://my-app-server-liard.vercel.app/skin/${params.id}`)
+            //     loader:({params})=>fetch(`https://my-app-server-phi.vercel.app/skin/${params.id}`)
             // },
             {
                 path: '/skinEditshow',
@@ -146,25 +146,25 @@ export const router = createBrowserRouter([
             {
                 path: 'skinEditshow/:id',
                 element: <SkinEdit></SkinEdit>,
-                loader:({params})=>fetch(`https://my-app-server-liard.vercel.app/skin/${params.id}`)
+                loader:({params})=>fetch(`https://my-app-server-phi.vercel.app/skin/${params.id}`)
          
             },
             {
                 path: '/hairEdit/:id',
                 element:<HairEdit></HairEdit>,
-                loader:({params})=>fetch(`https://my-app-server-liard.vercel.app/cosmetics/${params.id}`)
+                loader:({params})=>fetch(`https://my-app-server-phi.vercel.app/cosmetics/${params.id}`)
 
             },
             {
                 path: '/babyEdit/:id',
                 element:<BabyEdit></BabyEdit>,
-                loader:({params})=>fetch(`https://my-app-server-liard.vercel.app/babyCosmetics/${params.id}`)
+                loader:({params})=>fetch(`https://my-app-server-phi.vercel.app/babyCosmetics/${params.id}`)
 
             },
             {
                 path: '/makeUpEdit/:id',
                 element:<MakeUpEdit></MakeUpEdit>,
-                loader:({params})=>fetch(`https://my-app-server-liard.vercel.app/makeupcosmetics/${params.id}`)
+                loader:({params})=>fetch(`https://my-app-server-phi.vercel.app/makeupcosmetics/${params.id}`)
 
             },
         ]},
@@ -210,7 +210,7 @@ export const router = createBrowserRouter([
             // {
             //     path: 'skinEdit/:id',
             //     element:<SkinEdit></SkinEdit>,
-            //     loader:({params})=>fetch(`https://my-app-server-liard.vercel.app/skin/${params.id}`)
+            //     loader:({params})=>fetch(`https://my-app-server-phi.vercel.app/skin/${params.id}`)
             // },
             {
                 path: 'skinEditshow',
@@ -239,7 +239,7 @@ export const router = createBrowserRouter([
             {
                 path: 'skinEditshow/:id',
                 element: <SkinEdit></SkinEdit>,
-                loader:({params})=>fetch(`https://my-app-server-liard.vercel.app/skin/${params.id}`)
+                loader:({params})=>fetch(`https://my-app-server-phi.vercel.app/skin/${params.id}`)
          
             },
             {
@@ -253,19 +253,19 @@ export const router = createBrowserRouter([
             {
                 path: 'hairEdit/:id',
                 element:<HairEdit></HairEdit>,
-                loader:({params})=>fetch(`https://my-app-server-liard.vercel.app/cosmetics/${params.id}`)
+                loader:({params})=>fetch(`https://my-app-server-phi.vercel.app/cosmetics/${params.id}`)
 
             },
             {
                 path: 'babyEdit/:id',
                 element:<BabyEdit></BabyEdit>,
-                loader:({params})=>fetch(`https://my-app-server-liard.vercel.app/babyCosmetics/${params.id}`)
+                loader:({params})=>fetch(`https://my-app-server-phi.vercel.app/babyCosmetics/${params.id}`)
 
             },
             {
                 path: 'makeUpEdit/:id',
                 element:<MakeUpEdit></MakeUpEdit>,
-                loader:({params})=>fetch(`https://my-app-server-liard.vercel.app/makeupcosmetics/${params.id}`)
+                loader:({params})=>fetch(`https://my-app-server-phi.vercel.app/makeupcosmetics/${params.id}`)
 
             },
             ]

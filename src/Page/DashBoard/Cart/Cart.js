@@ -24,7 +24,7 @@ const Cart = () => {
     }).then((result) => {
       if (result.isConfirmed) {
 
-        axiosSecure.delete(`/cartItem/${id}`)
+        axiosSecure.delete(`/api/cartItem/${id}`)
           .then(res => {
             console.log(res);
             if (res.data.deletedCount > 0) {

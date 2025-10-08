@@ -5,7 +5,7 @@ const ReviewShow = () => {
 
   const fetchReviews = async () => {
     try {
-      const res = await fetch("https://my-app-server-liard.vercel.app/review");
+      const res = await fetch("https://my-app-server-phi.vercel.app/review");
       const data = await res.json();
       setReviews(data);
     } catch (err) {

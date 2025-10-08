@@ -41,7 +41,7 @@ const addNewHairProduct = {
       // const initialData = Object.fromEntries(formData.entries());
       // console.log(initialData);
 
-      fetch('https://my-app-server-liard.vercel.app/cosmetics',{
+      fetch('https://my-app-server-phi.vercel.app/cosmetics',{
           method :'POST',
           headers: {
               'content-type': 'application/json'

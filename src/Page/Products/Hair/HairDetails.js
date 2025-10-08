@@ -23,7 +23,7 @@ const HairDetails = () => {
         image,
         price
       }
-      axiosSecure.post('/cartItem', cartItem)
+      axiosSecure.post('/api/cartItem', cartItem)
         .then(res => {
           if (res.data.insertedId) {
             Swal.fire({

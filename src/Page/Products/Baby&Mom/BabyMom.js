@@ -4,7 +4,7 @@ import BabyMonPro from './BabyMonPro';
 const BabyMom = () => {
   const [babyProducts, setbabyProducts] = useState([]);
   useEffect(() => {
-    fetch('https://my-app-server-liard.vercel.app/babyCosmetics')
+    fetch('https://my-app-server-phi.vercel.app/babyCosmetics')
       .then(res => res.json())
       .then(data => setbabyProducts(data))
   })
